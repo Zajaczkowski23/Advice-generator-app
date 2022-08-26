@@ -4,7 +4,6 @@ const button = document.querySelector('#btn');
 
 button.addEventListener('click', newAdvice);
 
-window.onload = newAdvice;
 
 function newAdvice() {
     fetch('https://api.adviceslip.com/advice').then(res => {
