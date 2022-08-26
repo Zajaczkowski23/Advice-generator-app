@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Dark-Blue);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--Dark-Grayish-Blue);
+    text-align: center;
+    padding: 3rem;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 600px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.advice {
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: .9rem;
+}
+
+.adviceText {
+    color: var(--Light-Cyan);
+    margin: 2rem 0;
+    font-size: 1.7rem;
+}
+
+.img {
+    margin: 0 auto 2rem;
+}
+
+.img-small {
+    display: none;
+}
+
+.dice {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--Neon-Green);
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice button {
+    background-color: inherit;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.dice button:hover {
+    box-shadow: 3px 0px 50px 0px var(--Neon-Green);
+    transform: scale(1.2);
+}
+
+.dice button svg {
+    transform: scale(1.2);
+}
+
+@media (max-width: 610px) {
+    .container {
+        max-width: 400px;
+    }
+
+    .adviceText {
+        font-size: 1.5rem;
+    }
+
+    .img-small {
+        display: block;
+    }
+
+    .img-big {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 1.5rem;
+        margin: 0 2rem;
+        max-width: 340px;
+    }
+}
